@@ -27,3 +27,5 @@ MSG
 fi
 
 unset _old_path
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

@@ -27,3 +27,8 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[user]
+	email = thefactus@gmail.com
+	name = Pablo Bello
+[credential]
+	helper = cache

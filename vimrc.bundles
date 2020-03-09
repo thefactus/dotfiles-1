@@ -36,6 +36,53 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
+Plug 'ngmy/vim-rubocop'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdtree'
+Plug 'andymass/vim-matchup'
+Plug 'Shadowsith/vim-ruby-autocomplete'
+Plug 'autozimu/LanguageClient-neovim'
+Plug 'itchyny/lightline.vim'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'autozimu/LanguageClient-neovim'
+Plug 'jparise/vim-graphql'
+Plug 'airblade/vim-gitgutter'
+Plug 'thoughtbot/vim-rspec'
+Plug 'leafgarland/typescript-vim'
+Plug 'mhinz/vim-mix-format'
+Plug 'mxw/vim-jsx'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'othree/yajs.vim'
+" Plug 'ryanoasis/vim-devicons'
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" let g:deoplete#enable_at_startup = 1
 
 if g:has_async
   Plug 'w0rp/ale'

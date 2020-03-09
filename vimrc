@@ -174,3 +174,55 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" Theme
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+colorscheme OceanicNext
+" colorscheme dracula
+let g:go_version_warning = 0
+
+" Ignore
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Nerdtree win position
+let g:NERDTreeWinPos = "left"
+" Nerdtree quit on open
+" let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
+" au VimEnter *  NERDTree
+
+" vim light color change
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+let g:neocomplete#sources#omni#input_patterns = {
+      \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+      \}
+
+" nerdtree open all tabs
+" let g:nerdtree_tabs_open_on_console_startup=1
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
+
+let g:mix_format_on_save = 1
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
